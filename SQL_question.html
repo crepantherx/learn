@@ -6,14 +6,12 @@
         <link rel="stylesheet" href="style.css">
         <style>
             main {
-                /* display: grid;
-                justify-items: center;
-                align-items: center;
-                height: 95vh;
-                grid-auto-flow: column; */
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: center;
+            }
+            .data-tilt{
+                margin: 25px;
             }
             section {
                 text-align: center;
@@ -35,34 +33,42 @@
             button {
                 margin-right: 15px;
             }
+            header{
+                margin:20px;
+            }
         </style>
     </head>
     <body>
-        <aside>
+        <!-- <aside>
             <a href="https://github.com/crepantherx">
                 GITHUB
             </a>
             <a href="https://www.linkedin.com/in/crepantherx/">
                 LINKEDIN
             </a>
-        </aside>
+        </aside> -->
 
+        <header>
+            Real SQL
+            <button class="btn" style="position: absolute; top: 10px; right:10px"><a href="#"></a>@Rs. 49</a></button>
+
+        </header>
 
         <main>
-
             <div class="data-tilt">
                 <section>
                     <label for="">Set A</label>
                     <img src="../icon/download_b.png" alt="" width="200" height="280">
-                    <button><a href="SQL_question.html">Download</a>
+                    <button class="btn" ><a href="SQL_question.html">Buy</a></button>
                     <!-- </button><button><a href="https://algo.crepantherx.dev/">Website</a></button> -->
                 </section>
             </div>
+
             <div class="data-tilt">
                 <section>
                     <label for="">Set B</label>
                     <img src="../icon/download.png" alt="" width="200" height="280">
-                    <button><a href="SQL_question.html">Download</a>
+                    <button class="btn"><a href="SQL_question.html">Buy</a></button>
                     <!-- </button><button><a href="https://algo.crepantherx.dev/">Website</a></button> -->
                 </section>
             </div>
