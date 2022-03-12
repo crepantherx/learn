@@ -1,48 +1,52 @@
 <html lang="en">
+
 <head>
     <title>skill.crepantherx.dev</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <div id='home'>
-        <a href="https://skill.crepantherx.dev/"><img src="../icon/home.png" alt=""> </a>
-        <label id="tag-line">Challenge yourself to be at next level</label>
-    </div>
+    <header>
+        <div class="course-header">
+            <a href="https://skill.crepantherx.dev/" style="margin: 10px"><img src="../icon/home.png" alt=""> </a>
+            <label id="tag-line">Challenge yourself to be at next level</label>
+        </div>
+    </header>
 
     <main>
 
-        <article class="data-tilt" >
-            <section>
-                <a href="https://sql.crepantherx.dev/">
-                    <label class="lbl" for="">SQL</label>
-                    <img class="subject-icon" src="../icon/image.png" alt="" width="200" height="200" style="opacity: 0.8;">
-                    <button class="btn"><a href="https://sql.crepantherx.dev/"">Open</a>
+        <article>
+            <section >
+                <a href="https://sql.crepantherx.dev/" class="course">
+                    <label for="" class="course-subject">SQL</label>
+                    <img class="data-tilt" id="subject-image" src="../icon/image.png" alt="" width="200" height="200" style="opacity: 0.8;">
+                    <label href="https://sql.crepantherx.dev/" class="open-btn">Open</label>   
                 </a>
             </section>
-        </article>
-        
-        <article class="data-tilt" >
-            <section>
-                <a href="https://algo.crepantherx.dev/">
-                    <label class="lbl" for="">Python</label>
-                    <img class="subject-icon" src="../icon/py.png" alt="" width="200" height="200" style="opacity: 0.8;">
-                    <button class="btn"><a href="python.html">Open</a>
+
+            <section >
+                <a href="python.html" class="course">
+                    <label for="" class="course-subject">Python</label>
+                    <img class="data-tilt" id="subject-image" src="../icon/py.png" alt="" width="200" height="200" style="opacity: 0.8;">
+                    <label href="python.html" class="open-btn">Open</label>
                 </a>
             </section>
         </article>
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="tilt.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.data-tilt').tilt({
                 scale: 1.1
             })
         })
     </script>
 </body>
+
 </html>

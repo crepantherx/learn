@@ -1,531 +1,177 @@
-
-@media screen and (max-width:1080px) {
-  /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
-  @font-face {
+/* CSS for screens that are 320 pixels or less will be put in this section */
+@font-face {
     font-family: "hacker";
     src: url("hacker.ttf") format("truetype");
-  }
-  .symbols {
-    width: 25px;
-    height: 25px;
-  }
-  body {
-    height: calc(100vh - 8em);
-    color: rgba(255, 255, 255, 0.75);
-    background-color: rgb(25, 25, 25);
-  }
-  * {
+}
+
+* {
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
     font-family: "hacker";
     text-transform: uppercase;
     letter-spacing: 4px;
-  }
-article{
-  display: grid;
-  place-items: center;
-  place-content: center;
-
 }
-  .subject-icon {
-    display: none;
-  }
-.btn{
-  display:none;
-}
-  .lbl{
-        padding: 10px;
-    background-color:rgb(0, 187, 0);
-    border:none;
-    color: black;
-  }
-  #tag-line{
-    font-size: 2.2vh;
-  }
-  footer {
-    background-color: rgb(0, 187, 0);
-    position: -webkit-sticky;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    min-height: 5vh;
-    font-size: 2.5vh;
-    align-items: center;
-    line-height: 3vh;
-    display: grid;
-    place-content: center;
-  }
-  
-  nav {
-    padding: 10px;
-    /* float: right; */
-    display: flex;
-    justify-content: space-around;
-    text-transform: uppercase;
-  }
-  #logo > div {
-    padding: 10px;
-    color: rgb(25, 25, 25);
-  }
-  nav > a {
-    margin-right: 20px;
-  }
-  footer > #logo {
-    float: left;
-  }
-  aside {
-    border: 1px solid rgb(0, 187, 0);
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    writing-mode: vertical-rl;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-  aside > a {
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.75);
-  }
-  figure {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  main {
-    /* border: 1px solid black;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 95vh;
-    grid-auto-flow: column; */
-  
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 95vh;
-    display: grid;
-    place-items: center;
-    place-content: center;
-    height: 95vh;
-    gap: 27px;
-    
-    grid-auto-flow: row;
-    /* grid-template-columns: auto auto auto; */
-  }
-  
-  
-  
-  
-  main > section{
-    display: grid;
-    place-items: center;
-    place-content: center;
-  }
-  .profile-picture {
-    border-radius: 50%;
-  }
-  .introduction {
-    text-align: center;
-  }
-  
-  /* Google Fonts */
-  @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-  
-  /* Global */
-  html {
-    min-height: 100%;
-    overflow: hidden;
-  }
-  
-  .css-typing p {
-    text-align: center;
-    border-right: 0.15em solid whitesmoke;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .css-typing p:nth-child(1) {
-    width: 0ch;
-    -webkit-animation: type 0.5s steps(6, end);
-    animation: type 0.5s steps(6, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(2) {
-    width: 11.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(3) {
-    width: 7.3em;
-    opacity: 0;
-    -webkit-animation: type3 5s steps(20, end),
-      blink 0.5s step-end infinite alternate;
-    animation: type3 5s steps(20, end), blink 0.5s step-end infinite alternate;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes type {
-    0% {
-      width: 0ch;
-    }
-    99.9% {
-      border-right: 0.15em solid orange;
-    }
-    100% {
-      width: 3ch;
-    }
-  }
-  
-  @-webkit-keyframes type {
-    0% {
-      width: 0ch;
-    }
-    99.9% {
-      border-right: 0.15em solid orange;
-    }
-    100% {
-      border: none;
-    }
-  }
-  
-  @keyframes type2 {
-    0% {
-      width: 0ch;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: 0.15em solid orange;
-    }
-    100% {
-      opacity: 1;
-      border: none;
-    }
-  }
-  
-  @-webkit-keyframes type2 {
-    0% {
-      width: 0ch;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: 0.15em solid orange;
-    }
-    100% {
-      opacity: 1;
-      border: none;
-    }
-  }
-  
-  @keyframes type3 {
-    0% {
-      width: 0ch;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @-webkit-keyframes type3 {
-    0% {
-      width: 0ch;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-  @-webkit-keyframes blink {
-    50% {
-      border-color: tranparent;
-    }
-  }
-  nav > button {
-    display: none;
-  }
-  
-  @media only screen and (max-width: 720px) {
-    nav > button {
-      /*makes the button visible*/
-      display: block;
-  
-      /*since we are here, we can style it a little bit!*/
-      /* padding: 2vw; */
-      font-size: 2.5vh;
-      background-color: rgb(0, 187, 0);
-      border: none;
-  
-      /*outline none removes the default blue border that appears anytime you click on the button*/
-      outline: none;
-  
-      cursor: pointer;
-      align-self: flex-end;
-    }
-  
-    nav {
-      display: flex;
-      flex-direction: column;
-      float: none;
-    }
-    nav > a {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  }
-  #my-name {
-    text-transform: uppercase;
-    background: linear-gradient(to right, #30cfd0 0%, #00ff4c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 4vh;
-  }
-  #brand {
-    text-transform: uppercase;
-    font-weight: bolder;
-    background: linear-gradient(to right, black 0%, blue 150%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  #my-name:hover {
-    color: linear-gradient(to right, black 0%, blue 150%);
-    
-    
-  }
-  
-  #rest {
-    text-transform:capitalize;
-    background: linear-gradient(to right, #30cfd0 0%, #00ff4c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.8vh;
-  }
-  
-  .btn{
-    padding: 10px;
-    background-color:rgb(0, 187, 0);
-    border:none;
-    
-  }
-  #home{
-    position: absolute;
-    top: 4vh;
-    left: 3vw;
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-auto-flow: column;
-  }
-  
-  main {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-     */
-    
-  
-    }
-  .data-tilt{
-    margin: 25px;
-  }
-  section {
-    text-align: center;
-    width: 20vw;
-    padding: 15px;
-    
-  }
-  img {
-    object-fit: cover;
-    margin: 15px;
-  }
-  #green-box {
-    border: 1px solid rgb(0, 187, 0);
-  }
-  main > section > article {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  button {
-    margin-right: 15px;
-  }
-  label{
-    color:white;
-  }
-} 
 
-@media screen and (min-width:1080px) {
-  /* CSS for screens that are 320 pixels or less will be put in this section */
-  @font-face {
-    font-family: "hacker";
-    src: url("hacker.ttf") format("truetype");
-  }
-  .symbols {
-    width: 25px;
-    height: 25px;
-  }
-  body {
-    height: calc(100vh - 8em);
-    color: rgba(255, 255, 255, 0.75);
-    background-color: rgb(25, 25, 25);
-  }
-  * {
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "hacker";
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  #tag-line{
-    font-size: 1rem;
-  }
-  footer {
-    background-color: rgb(0, 187, 0);
-    position: -webkit-sticky;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    min-height: 5vh;
-    font-size: 2.5vh;
-    align-items: center;
-    line-height: 3vh;
+body {
     display: grid;
-    place-content: center;
-  }
-  
-  nav {
-    padding: 10px;
-    /* float: right; */
-    display: flex;
-    justify-content: space-around;
-    text-transform: uppercase;
-  }
-  #logo > div {
-    padding: 10px;
-    color: rgb(25, 25, 25);
-  }
-  nav > a {
-    margin-right: 20px;
-  }
-  footer > #logo {
-    float: left;
-  }
-  aside {
-    border: 1px solid rgb(0, 187, 0);
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    writing-mode: vertical-rl;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-  aside > a {
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.75);
-  }
-  figure {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  main {
-    /* border: 1px solid black;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 95vh;
-    grid-auto-flow: column; */
-  
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 95vh;
-    display: grid;
-    place-items: center;
-    place-content: center;
-    height: 95vh;
-    gap: 27px;
-    
-    grid-auto-flow: column;
+    grid-template-rows: 15.5vh auto auto;
     grid-template-columns: auto auto auto;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    height: calc(100vh - 8em);
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(25, 25, 25);
+}
+
+header{
+    grid-area: header;
+    display: grid;
+    align-content: center;
+}
+
+.course-header{
+    /* position: absolute;
+    top: 4vh;
+    left: 3vw;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-auto-flow: column;
+    
+    color: white; */
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    color: white;
   }
-  
-  
-  
-  
-  main > section{
+
+main{
+    grid-area: main;
     display: grid;
     place-items: center;
     place-content: center;
+    grid-auto-flow: column;
+
+    
+}
+
+article{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 14px;
+
+}
+@media (max-width: 1080px) {
+    article{
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 14px;
+        justify-items: stretch;
+        justify-content: stretch;
+    }
+    .open-btn{
+        display: none
+    }
+    .course-subject{
+        padding: 10px;
+        background-color:rgb(0, 187, 0);
+        border:none;
+    }
+    section{
+        border: 0;
+    }
+    #subject-image{
+        display:none;
+    }
+    
+    #tag-line {
+        font-size: 2.4vh;
+    }
   }
-  .profile-picture {
-    border-radius: 50%;
-  }
-  .introduction {
-    text-align: center;
-  }
-  
-  /* Google Fonts */
-  @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-  
-  /* Global */
-  html {
+
+@media (min-width: 1080px) {
+    section{
+        border: 1px solid rgb(0, 187, 0);
+    }
+    #tag-line {
+        font-size: 2.4vh;
+    }
+}
+
+.course{
+    display: grid;
+    grid-auto-flow: row;
+    place-content: center;
+    place-items: center;
+
+    padding: 14px;
+}
+
+.course-subject {
+    color: white;
+}
+
+.open-btn{
+    padding: 10px;
+    background-color:rgb(0, 187, 0);
+    border:none;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    grid-area: footer;
+
+    background-color: rgb(0, 187, 0);
+    position: -webkit-sticky;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 5vh;
+    font-size: 2.5vh;
+    align-items: center;
+    line-height: 3vh;
+    display: grid;
+    place-content: center;
+    
+}
+
+
+
+/* ************************************************************************** */
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html {
     min-height: 100%;
     overflow: hidden;
-  }
-  
-  .css-typing p {
+}
+
+.css-typing p {
     text-align: center;
     border-right: 0.15em solid whitesmoke;
     white-space: nowrap;
     overflow: hidden;
-  }
-  .css-typing p:nth-child(1) {
+}
+
+.css-typing p:nth-child(1) {
     width: 0ch;
     -webkit-animation: type 0.5s steps(6, end);
     animation: type 0.5s steps(6, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(2) {
+}
+
+.css-typing p:nth-child(2) {
     width: 11.5em;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end);
@@ -534,220 +180,149 @@ article{
     animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(3) {
+}
+
+.css-typing p:nth-child(3) {
     width: 7.3em;
     opacity: 0;
-    -webkit-animation: type3 5s steps(20, end),
-      blink 0.5s step-end infinite alternate;
+    -webkit-animation: type3 5s steps(20, end), blink 0.5s step-end infinite alternate;
     animation: type3 5s steps(20, end), blink 0.5s step-end infinite alternate;
     -webkit-animation-delay: 4s;
     animation-delay: 4s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes type {
+}
+
+@keyframes type {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     99.9% {
-      border-right: 0.15em solid orange;
+        border-right: 0.15em solid orange;
     }
+
     100% {
-      width: 3ch;
+        width: 3ch;
     }
-  }
-  
-  @-webkit-keyframes type {
+}
+
+@-webkit-keyframes type {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     99.9% {
-      border-right: 0.15em solid orange;
+        border-right: 0.15em solid orange;
     }
+
     100% {
-      border: none;
+        border: none;
     }
-  }
-  
-  @keyframes type2 {
+}
+
+@keyframes type2 {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     99.9% {
-      border-right: 0.15em solid orange;
+        border-right: 0.15em solid orange;
     }
+
     100% {
-      opacity: 1;
-      border: none;
+        opacity: 1;
+        border: none;
     }
-  }
-  
-  @-webkit-keyframes type2 {
+}
+
+@-webkit-keyframes type2 {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     99.9% {
-      border-right: 0.15em solid orange;
+        border-right: 0.15em solid orange;
     }
+
     100% {
-      opacity: 1;
-      border: none;
+        opacity: 1;
+        border: none;
     }
-  }
-  
-  @keyframes type3 {
+}
+
+@keyframes type3 {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @-webkit-keyframes type3 {
+}
+
+@-webkit-keyframes type3 {
     0% {
-      width: 0ch;
+        width: 0ch;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
-  }
-  @-webkit-keyframes blink {
+}
+
+@-webkit-keyframes blink {
     50% {
-      border-color: tranparent;
+        border-color: tranparent;
     }
-  }
-  nav > button {
-    display: none;
-  }
-  
-  @media only screen and (max-width: 720px) {
-    nav > button {
-      /*makes the button visible*/
-      display: block;
-  
-      /*since we are here, we can style it a little bit!*/
-      /* padding: 2vw; */
-      font-size: 2.5vh;
-      background-color: rgb(0, 187, 0);
-      border: none;
-  
-      /*outline none removes the default blue border that appears anytime you click on the button*/
-      outline: none;
-  
-      cursor: pointer;
-      align-self: flex-end;
+}
+
+
+@media only screen and (max-width: 720px) {
+    nav>button {
+        /*makes the button visible*/
+        display: block;
+        /*since we are here, we can style it a little bit!*/
+        /* padding: 2vw; */
+        font-size: 2.5vh;
+        background-color: rgb(0, 187, 0);
+        border: none;
+        /*outline none removes the default blue border that appears anytime you click on the button*/
+        outline: none;
+        cursor: pointer;
+        align-self: flex-end;
     }
-  
+
     nav {
-      display: flex;
-      flex-direction: column;
-      float: none;
+        display: flex;
+        flex-direction: column;
+        float: none;
     }
-    nav > a {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  }
-  #my-name {
-    text-transform: uppercase;
-    background: linear-gradient(to right, #30cfd0 0%, #00ff4c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 4vh;
-  }
-  #brand {
-    text-transform: uppercase;
-    font-weight: bolder;
-    background: linear-gradient(to right, black 0%, blue 150%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  #my-name:hover {
-    color: linear-gradient(to right, black 0%, blue 150%);
-    
-    
-  }
-  
-  #rest {
-    text-transform:capitalize;
-    background: linear-gradient(to right, #30cfd0 0%, #00ff4c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.8vh;
-  }
-  
-  .btn{
-    padding: 10px;
-    background-color:rgb(0, 187, 0);
-    border:none;
-  }
-  #home{
-    position: absolute;
-    top: 4vh;
-    left: 3vw;
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-auto-flow: column;
-  }
-  
-  main {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-     */
-    
-  
-    }
-  .data-tilt{
-    margin: 25px;
-  }
-  section {
-    text-align: center;
-    width: 20vw;
-    padding: 15px;
-    
-  }
-  img {
-    object-fit: cover;
-    margin: 15px;
-  }
-  #green-box {
-    border: 1px solid rgb(0, 187, 0);
-  }
-  main > section > article {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  button {
-    margin-right: 15px;
-  }
-  label{
-    color:white;
-  }
-} 
 
-
+    nav>a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
