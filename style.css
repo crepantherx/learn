@@ -62,7 +62,6 @@ main{
 article{
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 100px;
 
 }
 @media (max-width: 1080px) {
@@ -71,6 +70,7 @@ article{
         grid-auto-flow: row;
         justify-items: stretch;
         justify-content: stretch;
+
     }
     .open-btn{
         display: none;
@@ -105,6 +105,9 @@ article{
     }
     #tag-line {
         font-size: 1.8vh;
+    }
+    article{
+        grid-gap: 100px;    
     }
 }
 
