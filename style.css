@@ -31,6 +31,14 @@ header{
     grid-area: header;
     display: grid;
     align-content: center;
+    background-color: rgb(25, 25, 25);
+    z-index: 500 !important;
+    position: -webkit-sticky;
+    position:fixed;
+    top: 0;
+    width:100vw;
+    padding-left: 25px;
+    padding-top: 10px;
 }
 
 .course-header{
@@ -45,7 +53,7 @@ header{
     color: white; */
     display: flex;
     align-items: center;
-    margin: 50px;
+    /* margin: 50px; */
     color: white;
   }
 
@@ -55,15 +63,16 @@ main{
     place-items: center;
     place-content: center;
     grid-auto-flow: column;
-
-    
 }
 
 article{
     display: grid;
-    grid-auto-flow: column;
-
+    /* grid-auto-flow: column; */
+    grid-template-columns: auto auto auto auto;
+    /* margin: 22px; */
+    place-content: space-between;
 }
+
 @media (max-width: 1080px) {
     article{
         display: grid;
@@ -100,14 +109,16 @@ article{
 
 @media (min-width: 1080px) {
     section{
+        /* margin-top: 20px; */
         border: 1px solid rgb(0, 187, 0);
-        width: 20vw;
+        width: 16vw;
+        border-radius: 25px;
     }
     #tag-line {
         font-size: 1.8vh;
     }
     article{
-        grid-gap: 100px;    
+        grid-gap: 25px;    
     }
 }
 
@@ -116,7 +127,7 @@ article{
     grid-auto-flow: row;
     place-content: center;
     place-items: center;
-    grid-gap: 20px;
+    grid-gap: 14px;
     padding: 14px;
 }
 
@@ -167,7 +178,7 @@ footer{
 /* Global */
 html {
     min-height: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .css-typing p {
@@ -340,3 +351,13 @@ html {
         margin-bottom: 10px;
     }
 }
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
